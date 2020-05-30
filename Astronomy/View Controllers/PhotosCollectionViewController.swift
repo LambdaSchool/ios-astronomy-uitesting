@@ -113,7 +113,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
 //        prevButton.addTarget(self, action: #selector(goToPreviousSol(_:)), for: .touchUpInside)
         
         let prevItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(goToPreviousSol(_:)))
-        prevItem.accessibilityIdentifier = "PhotosCollectionViewController.PreviousSolButton"
+        prevItem.accessibilityIdentifier = "PreviousSolButton"
         
 //        let nextTitle = NSAttributedString(string: ">", attributes: attrs)
 //        let nextButton = UIButton(type: .system)
@@ -122,7 +122,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
 //        nextButton.accessibilityIdentifier = "PhotosCollectionViewController.NextSolButton"
         
         let nextItem = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(goToNextSol(_:)))
-        nextItem.accessibilityIdentifier = "PhotosCollectionViewController.NextSolButton"
+        nextItem.accessibilityIdentifier = "NextSolButton"
         
 //        let stackView = UIStackView(arrangedSubviews: [prevButton, solLabel, nextButton])
 //        stackView.axis = .horizontal
@@ -132,6 +132,8 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
         
         navigationItem.setLeftBarButton(prevItem, animated: false)
         navigationItem.setRightBarButton(nextItem, animated: false)
+
+        navigationController?.navigationBar.accessibilityIdentifier = "NavBar"
     }
     
     private func updateViews() {
