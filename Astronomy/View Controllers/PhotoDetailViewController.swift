@@ -13,6 +13,7 @@ class PhotoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.backItem?.accessibilityLabel = "Back"
         updateViews()
     }
     
